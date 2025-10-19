@@ -1,0 +1,19 @@
+{
+  "name": "mern-azure-app",
+  "version": "1.0.0",
+  "description": "MERN app deployed on Azure",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "deploy": "node deploy.js",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "fs-extra": "^11.1.1"
+  }
+}
